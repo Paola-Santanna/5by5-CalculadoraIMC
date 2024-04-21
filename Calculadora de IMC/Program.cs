@@ -1,9 +1,5 @@
-﻿//Faça um programa que leia o peso, a altura e o sexo de uma pessoa e calcule o seu IMC, informando a situação da pessoa: sobrepeso, .... assim vai
+﻿Console.WriteLine("--- Calculadora de IMC ---\n");
 
-//Início
-Console.WriteLine("--- Calculadora de IMC ---\n");
-
-//Declaração de variáveis
 float imc, peso, peso_aux, altura, altura_aux;
 char sexo;
 string opcao_sexo = " ";
