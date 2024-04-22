@@ -45,7 +45,7 @@ do
 
 } while (sexo != 'f' && sexo != 'F' && sexo != 'm' && sexo != 'M' && sexo != 'o' && sexo != 'O' && sexo != 'p' && sexo != 'P');
 
-Console.WriteLine("\nDigite um valor POSITIVO e DIFERENTE DE ZERO");
+Console.WriteLine("\nDigite um valor MAIOR que ZERO");
 Console.WriteLine("Para números decimais, USE A VÍRGULA\n");
 
 do
@@ -54,10 +54,10 @@ do
     peso = float.Parse(Console.ReadLine());
     peso_aux = peso;
 
-    if (peso_aux == 0 || peso_aux < 0)
+    if (peso_aux <= 0)
         Console.WriteLine("\nNúmero Inválido\n");
 
-} while (peso_aux == 0 || peso_aux < 0);
+} while (peso_aux <= 0);
 
 do
 {
@@ -65,17 +65,17 @@ do
     altura = float.Parse(Console.ReadLine());
     altura_aux = altura;
 
-    if (altura_aux == 0 || altura_aux < 0)
+    if (altura_aux <= 0)
         Console.WriteLine("\nNúmero Inválido\n");
 
-} while (altura_aux == 0 || altura_aux < 0);
+} while (altura_aux <= 0);
 
 imc = peso_aux / (altura_aux * altura_aux);
 
 if (imc <= 18.5)
 {
     Console.WriteLine($"\nSexo: {opcao_sexo}");
-    Console.WriteLine($"IMC: {imc}");
+    Console.WriteLine($"IMC: {imc:0.00}");
     Console.WriteLine("Magreza");
 }
 else
@@ -83,7 +83,7 @@ else
     if (imc >= 18.6 && imc <= 24.9)
     {
         Console.WriteLine($"\nSexo: {opcao_sexo}");
-        Console.WriteLine($"IMC: {imc}");
+        Console.WriteLine($"IMC: {imc:0.00}");
         Console.WriteLine("Peso Normal");
     }
     else
@@ -91,7 +91,7 @@ else
         if (imc >= 25 && imc <= 29.9)
         {
             Console.WriteLine($"\nSexo: {opcao_sexo}");
-            Console.WriteLine($"IMC: {imc}");
+            Console.WriteLine($"IMC: {imc:0.00}");
             Console.WriteLine("Sobrepeso");
         }
         else
@@ -99,7 +99,7 @@ else
             if (imc >= 30 && imc <= 34.9)
             {
                 Console.WriteLine($"\nSexo: {opcao_sexo}");
-                Console.WriteLine($"IMC: {imc}");
+                Console.WriteLine($"IMC: {imc:0.00}");
                 Console.WriteLine("Obesidade de grau I");
             }
             else
@@ -107,13 +107,13 @@ else
                 if (imc >= 35 && imc <= 39.9)
                 {
                     Console.WriteLine($"\nSexo: {opcao_sexo}");
-                    Console.WriteLine($"IMC: {imc}");
+                    Console.WriteLine($"IMC: {imc:0.00}");
                     Console.WriteLine("Obesidade de grau II");
                 }
                 else
                 {
                     Console.WriteLine($"\nSexo: {opcao_sexo}");
-                    Console.WriteLine($"IMC: {imc}");
+                    Console.WriteLine($"IMC: {imc:0.00}");
                     Console.WriteLine("Obesidade de grau III");
                 }
             }
